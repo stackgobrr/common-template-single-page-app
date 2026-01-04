@@ -59,7 +59,7 @@ jobs:
         with:
           aws-region: ${{ env.AWS_REGION }}
           auth-method: 'oidc'
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
 
       - name: Deploy infrastructure
         uses: stackgobrr/common-github-actions/actions/terraform-deploy@main
